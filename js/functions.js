@@ -24,8 +24,8 @@ const usageChart = new Chart(ctxUsage, {
             label: 'Porcentaje de Uso',
             data: [75, 25],
             backgroundColor: [
-                'rgba(76, 175, 80, 0.6)', // Verde
-                'rgba(244, 67, 54, 0.6)'  // Rojo
+                'rgba(76, 175, 80, 0.6)', 
+                'rgba(244, 67, 54, 0.6)',  
             ],
             borderWidth: 1
         }]
@@ -68,3 +68,4 @@ const satisfactionChart = new Chart(ctxSatisfaction, {
         }
     }
 });
+
