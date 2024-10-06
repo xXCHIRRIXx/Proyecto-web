@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="multimedia/logo.png" alt="Logo" id="logo">
+                <h1>ADMINICASH</h1>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Menú
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="index.html">Inicio</a>
+                    <a class="dropdown-item" href="perfil.html">Perfil</a>
+                    <a class="dropdown-item" href="dashboard.html">Dashboard</a>
+                    <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
+                    <a class="dropdown-item" href="registro.html">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <h2 class="bienvenida-titulo">Tu éxito, nuestra misión.</h2>
+
+    <div class="banner text-center p-4" id="banner-color">
+        <h2 class="slogan">¿Por Qué Elegir Adminicash para Tu Gestión Financiera?</h2>
+        <p class="slogan-text">Adminicash ofrece una solución integral que simplifica la administración de tus finanzas, permitiéndote controlar tus ingresos y gastos de manera eficaz. Con su interfaz intuitiva y herramientas analíticas, Adminicash te ayuda a establecer presupuestos personalizados y tomar decisiones informadas que fomenten el ahorro.</p>
+    </div>
+    
+
+    <div class="container mt-5 text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Gestión Financiera</h3>
+                <canvas id="usageChart" width="400" height="400"></canvas> <!-- Ajustar tamaño del gráfico -->
+            </div>
+            <div class="col-md-6">
+                <h3>Satisfacción del Cliente</h3>
+                <canvas id="satisfactionChart" width="400" height="400"></canvas> <!-- Ajustar tamaño del gráfico -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Testimonios</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Juan Pérez</h5>
+                        <p class="card-text">"Adminicash me ha facilitado la gestión de mis finanzas personales. ¡Recomiendo este servicio!"</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <button class="btn btn-link">Responder</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">María López</h5>
+                        <p class="card-text">"He logrado ahorrar más desde que uso Adminicash. ¡Excelente aplicación!"</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="btn btn-link">Responder</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Carlos Gómez</h5>
+                        <p class="card-text">"Una herramienta indispensable para cualquier persona que quiera controlar su dinero."</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <button class="btn btn-link">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="tel:+1234567890" class="btn-floating" style="position: fixed; bottom: 20px; right: 20px;">
+        <i class="fas fa-phone fa-2x"></i>
+    </a>
+
+    <footer class="bg-light mt-5 p-3">
+        <div class="container d-flex justify-content-between">
+            <div class="card footer-card" style="width: 45%;">
+                <div class="card-body">
+                    <h5 class="card-title">Contacto</h5>
+                    <p class="card-text">Teléfono: +1 234 567 890</p>
+                    <p class="card-text">Email: servicioalcliente@adminicash.com</p>
+                </div>
+            </div>
+            <div class="card footer-card" style="width: 45%;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Síguenos en nuestras redes sociales</h5>
+                    <a href="#" class="btn btn-outline-primary btn-sm"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-outline-info btn-sm"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p class="mb-1">"Tu éxito, nuestra misión."</p> <!-- Frase inspiradora -->
+            <p>&copy; 2024 Adminicash. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/functions.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/chart.js" defer></script>
+</body>
+</html>

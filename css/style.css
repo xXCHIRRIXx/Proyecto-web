@@ -7,6 +7,13 @@ header {
     color: #FFFFFF;
 }
 
+.banner {
+    background-color: #e8f5e9;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
 .card {
     background-color: #F0FFF0;
 }
@@ -56,7 +63,10 @@ header {
 }
 
 .footer-card {
-    border: none;
+    border: 1px solid #d4edda; 
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
 }
 
 .form-control {
@@ -76,4 +86,43 @@ header {
 #logo {
     width: 70px;
     height: auto;
+}
+
+.card-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.card-footeer{
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+.banner {
+    background-image: url('../multimedia/banner.jpg');
+    background-position: center; 
+    position: relative; 
+    height: 300px; 
+    color: #FFFFFF; 
+}
+
+
+.banner h2 {
+    position: relative; 
+    z-index: 2; 
+    margin-top: 50px; 
+}
+
+.bienvenida-titulo{
+    text-align: center;
+    margin: 25px 0 20px 0;
+}
+
+.banner {
+    color: #000;
+}
+
+.slogan-text {
+    font-size: 20px;
+    letter-spacing: 1.1px;
 }
