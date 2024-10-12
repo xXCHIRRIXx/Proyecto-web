@@ -32,36 +32,60 @@
 
     <div class="container mt-4">
         <div class="row text-center">
-            <!-- Tarjetas con métricas claves -->
-            <div class="col-md-3">
+            <!-- Tarjetas con los grupos contables principales -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Activos</h5>
+                        <p class="card-text display-4" id="activos">$500,000</p>
+                        <button class="btn btn-admin tarjetas-administrativas" onclick="window.location.href='perfil.html'">Administrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Pasivos</h5>
+                        <p class="card-text display-4" id="pasivos">$200,000</p>
+                        <button class="btn btn-admin tarjetas-administrativas" onclick="window.location.href='perfil.html'">Administrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Patrimonio</h5>
+                        <p class="card-text display-4" id="patrimonio">$300,000</p>
+                        <button class="btn btn-admin tarjetas-administrativas" onclick="window.location.href='perfil.html'">Administrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <div class="card-body">
                         <h5 class="card-title">Ingresos</h5>
-                        <p class="card-text display-4" id="total-ingresos">$45,000</p>
+                        <p class="card-text display-4" id="ingresos">$45,000</p>
+                        <button class="btn btn-admin tarjetas-administrativas" onclick="window.location.href='perfil.html'">Administrar</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <div class="card-body">
                         <h5 class="card-title">Gastos</h5>
-                        <p class="card-text display-4" id="total-gastos">$12,500</p>
+                        <p class="card-text display-4" id="gastos">$12,500</p>
+                        <button class="btn btn-admin tarjetas-administrativas" onclick="window.location.href='perfil.html'">Administrar</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Ahorros</h5>
-                        <p class="card-text display-4" id="total-ahorros">$10,000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Clientes Activos</h5>
-                        <p class="card-text display-4" id="clientes-activos">1,024</p>
+                        <h5 class="card-title">Costos/Gastos de Operación</h5>
+                        <p class="card-text display-4" id="costos-operacion">$5,000</p>
+                        <button class="btn btn-admin tarjetas-administrativas" onclick="window.location.href='perfil.html'">Administrar</button>
                     </div>
                 </div>
             </div>
