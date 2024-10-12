@@ -57,6 +57,7 @@ header h1 {
 .bienvenida-titulo {
     text-align: center;
     margin: 25px 0 20px 0;
+    text-decoration: underline;
 }
 
 /* Slogan Styles */
@@ -279,4 +280,11 @@ table {
     border-radius: 10px;
     background-color: #006F40;
     color: #fff;
+}
+
+.card-body.card-grupos {
+    display: flex; /* Activa flexbox en el contenedor */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los botones, puedes ajustar este valor */
 }

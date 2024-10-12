@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Adminicash</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilo para ocultar secciones */
+        .content-section {
+            display: none; /* Oculta todas las secciones inicialmente */
+        }
+    </style>
+</head>
+<body>
+    <header class="p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="multimedia/logo.png" alt="Logo" id="logo">
+                <h1>ADMINICASH</h1>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Menú
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="index.html">Inicio</a>
+                    <a class="dropdown-item" href="perfil.html">Perfil</a>
+                    <a class="dropdown-item" href="dashboard.html">Dashboard</a>
+                    <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
+                    <a class="dropdown-item" href="registro.html">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <h2 class="bienvenida-titulo">Tu perfil</h2>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Menú lateral -->
+            <nav class="col-md-3">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showSection('perfil')">Ver Perfil</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showSection('administracion')">Administración</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showSection('historial')">Historial</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showSection('informe')">Informe</a>
+                </div>
+            </nav>
+
+            <!-- Contenido principal -->
+            <main class="col-md-9">
+                <div id="perfil" class="content-section mt-3">
+                    <h2>Información del Perfil</h2>
+                    <form id="perfilForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" value="Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" value="juanperez@ejemplo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" class="form-control" id="telefono" value="+1 234 567 890">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" class="form-control" id="direccion" value="Cr78a bis #77-88s">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="guardarPerfil()">Guardar Cambios</button>
+                    </form>
+                </div>
+
+                <div id="administracion" class="content-section mt-3">
+                    <h2>Administración</h2>
+                    <p>Aquí puedes administrar tus grupos contables y realizar cambios necesarios.</p>
+                    <div class="row">
+                        <!-- Tarjeta para Activos -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body card-grupos">
+                                    <h5 class="card-title">Activos</h5>
+                                    <button class="btn btn-primary" onclick="agregarGrupo('Activos')">Agregar</button>
+                                    <button class="btn btn-danger" onclick="eliminarGrupo('Activos')">Eliminar</button>
+                                    <button class="btn btn-warning" onclick="modificarGrupo('Activos')">Modificar</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Tarjeta para Pasivos -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body card-grupos">
+                                    <h5 class="card-title">Pasivos</h5>
+                                    <button class="btn btn-primary" onclick="agregarGrupo('Pasivos')">Agregar</button>
+                                    <button class="btn btn-danger" onclick="eliminarGrupo('Pasivos')">Eliminar</button>
+                                    <button class="btn btn-warning" onclick="modificarGrupo('Pasivos')">Modificar</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Tarjeta para Patrimonio -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body card-grupos">
+                                    <h5 class="card-title">Patrimonio</h5>
+                                    <button class="btn btn-primary" onclick="agregarGrupo('Patrimonio')">Agregar</button>
+                                    <button class="btn btn-danger" onclick="eliminarGrupo('Patrimonio')">Eliminar</button>
+                                    <button class="btn btn-warning" onclick="modificarGrupo('Patrimonio')">Modificar</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Tarjeta para Ingresos -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body card-grupos">
+                                    <h5 class="card-title">Ingresos</h5>
+                                    <button class="btn btn-primary" onclick="agregarGrupo('Ingresos')">Agregar</button>
+                                    <button class="btn btn-danger" onclick="eliminarGrupo('Ingresos')">Eliminar</button>
+                                    <button class="btn btn-warning" onclick="modificarGrupo('Ingresos')">Modificar</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Tarjeta para Gastos -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body card-grupos">
+                                    <h5 class="card-title">Gastos</h5>
+                                    <button class="btn btn-primary" onclick="agregarGrupo('Gastos')">Agregar</button>
+                                    <button class="btn btn-danger" onclick="eliminarGrupo('Gastos')">Eliminar</button>
+                                    <button class="btn btn-warning" onclick="modificarGrupo('Gastos')">Modificar</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Tarjeta para Costos/Gastos de Operación -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body card-grupos">
+                                    <h5 class="card-title">Costos/Gastos de Operación</h5>
+                                    <button class="btn btn-primary" onclick="agregarGrupo('Costos/Gastos de Operación')">Agregar</button>
+                                    <button class="btn btn-danger" onclick="eliminarGrupo('Costos/Gastos de Operación')">Eliminar</button>
+                                    <button class="btn btn-warning" onclick="modificarGrupo('Costos/Gastos de Operación')">Modificar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="historial" class="content-section mt-3">
+                    <h2>Historial de Transacciones</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Descripción</th>
+                                <th>Monto</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-10-01</td>
+                                <td>Ingreso por Ventas</td>
+                                <td>$15,000</td>
+                                <td>Ingreso</td>
+                            </tr>
+                            <tr>
+                                <td>2024-09-28</td>
+                                <td>Pago a Proveedores</td>
+                                <td>$7,500</td>
+                                <td>Gasto</td>
+                            </tr>
+                            <tr>
+                                <td>2024-09-25</td>
+                                <td>Pago de Nómina</td>
+                                <td>$10,000</td>
+                                <td>Gasto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="informe" class="content-section mt-3">
+                    <h2>Informe de Datos</h2>
+                    <p>Aquí puedes generar un informe con tus datos financieros.</p>
+                    <button class="btn btn-primary">Generar Informe</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-light mt-5 p-3">
+        <div class="container d-flex justify-content-between">
+            <div class="card footer-card" style="width: 45%;">
+                <div class="card-body">
+                    <h5 class="card-title">Contacto</h5>
+                    <p class="card-text">Teléfono: +1 234 567 890</p>
+                    <p class="card-text">Email: servicioalcliente@adminicash.com</p>
+                </div>
+            </div>
+            <div class="card footer-card" style="width: 45%;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Síguenos en nuestras redes sociales</h5>
+                    <a href="#" class="btn btn-outline-primary btn-sm"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-outline-info btn-sm"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p class="mb-1">"Tu éxito, nuestra misión."</p>
+            <p>&copy; 2024 Adminicash. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/functions.js"></script> 
+</body>
+</html>
